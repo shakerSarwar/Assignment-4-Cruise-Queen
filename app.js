@@ -125,13 +125,25 @@ function subTotal() {
     
     const grandTotal = totalPrice + vat;
     document.getElementById("grand-total").innerText = grandTotal;
-    }
+    
     
     document.getElementById("bookNow").addEventListener("click",function() {
-        alert("Want To GO : New York, United States?")
-})
+        const ticketCount = document.getElementById("ticketCount");
+        const firstClassTicket = parseInt(ticketCount).value;
 
+        const ticketCountEconomy = document.getElementById("ticketCountEconomy");
+        const economyClassTicket = parseInt(ticketCountEconomy).value;
 
+        const totalTicketCost = document.getElementById("totalTicketCost");
+        const totalTicketCostNum = parseInt(totalTicketCost).value;
+
+        document.getElementById("ticketCount").innerText = firstClassInputNumber;
+        document.getElementById("ticketCountEconomy").innerText = economyClassInputNumber;
+        document.getElementById("totalTicketCost").innerText = grandTotal;
+
+    })
+
+}
 
 
 
